@@ -99,7 +99,7 @@ $main-content-margin-block-bg-color
 
     hr {
         border-color: $dark-text-color;
-        background-color: $dark-text-color !important;
+        background-color: $new-light-panel-bg-color;;
     }
 
     a {
@@ -1105,7 +1105,7 @@ $main-content-margin-block-bg-color
         li {
 
             > a {
-                color: $account-dimmed;
+                color: $new-account-dimmed;
                 .icon > svg > path {
                   fill: $account-dimmed;
                 }
