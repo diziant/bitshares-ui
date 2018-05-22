@@ -12,14 +12,14 @@
 @include font-face(AvenirNextCyr-Demi, 'vendors/AvenirNextCyr-Demi', 600, normal);
 @mixin AvenirNextCyr-Demi {
   font-family: 'AvenirNextCyr-Demi', arial, sans-serif;
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
 }
 
 @include font-face(AvenirNextCyr-Medium, 'vendors/AvenirNextCyr-Medium', 500, normal);
 @mixin AvenirNextCyr-Medium {
   font-family: 'AvenirNextCyr-Medium', arial, sans-serif;
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 
