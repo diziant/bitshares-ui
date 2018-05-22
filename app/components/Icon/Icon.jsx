@@ -9,7 +9,7 @@ let icons = ["user", "trash", "chevron-down", "menu", "database", "download", "s
     "thumb-tack", "thumb-untack", "clock", "clippy", "shuffle", "transfer", "dollar", "dollar-green", "deposit", "withdraw",
     "settle", "trade", "adjust", "excel", "share", "minus-circle", "cogs", "dashboard",
     "server", "power", "thumbs-up", "folder", "warning", "gift", "text", "list",
-    "hourglass", "news", "hamburger", "hamburger-x"];
+    "hourglass", "news", "hamburger", "hamburger-x", "wallet"];
 
 let icons_map = {};
 for (let i of icons) icons_map[i] = require(`./${i}.svg`);

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>wallet</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="top-markets" transform="translate(-1146.000000, -22.000000)">
+            <g id="wallet" transform="translate(1147.000000, 23.000000)">
+                <path d="M4.4408921e-16,1.94307116 L4.4408921e-16,1.94307116 C1.08804353e-14,3.04764066 0.8954305,3.94307116 2,3.94307116 L14,3.94307116 L14,12 L2,12 C0.8954305,12 -1.64108609e-15,11.1045695 -1.77635684e-15,10 L-2.22044605e-15,2 C-2.3557168e-15,0.8954305 0.8954305,2.02906125e-16 2,0 L12,0 L12,3.94307116" id="Rectangle-5" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"></path>
+                <rect id="Rectangle-7" fill="#FFFFFF" x="9" y="7" width="2" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

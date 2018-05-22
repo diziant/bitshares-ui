@@ -1965,7 +1965,8 @@ $main-content-margin-block-bg-color
     height: 60px;
 
     .menu-bar {
-        overflow: visible;
+        display: flex;
+        align-items: center;
     }
 
     .logo {

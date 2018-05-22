@@ -26,7 +26,7 @@ import notify from "actions/NotificationActions";
 import AccountImage from "../Account/AccountImage";
 import {ChainStore} from "bitsharesjs";
 
-var logo = require("assets/logo-ico-blue.png");
+var logo = require("assets/logo-ico.png");
 
 // const FlagImage = ({flag, width = 20, height = 20}) => {
 //     return <img height={height} width={width} src={`${__BASE_URL__}language-dropdown/${flag.toUpperCase()}.png`} />;
@@ -323,7 +323,7 @@ class Header extends React.Component {
                 className={cnames("logo", {active: active === "/" || (active.indexOf("dashboard") !== -1 && active.indexOf("account") === -1)})}
                 onClick={this._onNavigate.bind(this, "/dashboard")}
             >
-                <img style={{margin: 0, height: 40}} src={logo} />
+                <img style={{margin: 0}} src={logo} />
             </a>
         );
 
@@ -375,84 +375,72 @@ class Header extends React.Component {
         if(active.indexOf("transfer") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: true})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="transfer"/>
                     <Translate className="column-hide-small" component="span" content="header.payments" />
                 </a>;
         }
         if(active.indexOf("settings") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("settings") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="cogs"/>
                     <Translate className="column-hide-small" component="span" content="header.settings" />
                 </a>;
         }
         if(active.indexOf("deposit-withdraw") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("deposit-withdraw") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="deposit"/>
                     <Translate className="column-hide-small" component="span" content="header.deposit-withdraw" />
                 </a>;
         }
         if(active.indexOf("news") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("news") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="news"/>
                     <Translate className="column-hide-small" component="span" content="news.news" />
                 </a>;
         }
         if(active.indexOf("help") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("help") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="question-circle"/>
                     <Translate className="column-hide-small" component="span" content="header.help" />
                 </a>;
         }
         if(active.indexOf("/voting") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("/voting") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="thumbs-up"/>
                     <Translate className="column-hide-small" component="span" content="account.voting" />
                 </a>;
         }
         if(active.indexOf("/assets") !== -1 && active.indexOf("explorer") === -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("/assets") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="assets"/>
                     <Translate className="column-hide-small" component="span" content="explorer.assets.title" />
                 </a>;
         }
         if(active.indexOf("/signedmessages") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("/signedmessages") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="text"/>
                     <Translate className="column-hide-small" component="span" content="account.signedmessages.menuitem" />
                 </a>;
         }
         if(active.indexOf("/member-stats") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("/member-stats") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="text"/>
                     <Translate className="column-hide-small" component="span" content="account.member.stats" />
                 </a>;
         }
         if(active.indexOf("/vesting") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("/vesting") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="hourglass"/>
                     <Translate className="column-hide-small" component="span" content="account.vesting.title" />
                 </a>;
         }
         if(active.indexOf("/whitelist") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("/whitelist") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="list"/>
                     <Translate className="column-hide-small" component="span" content="account.whitelist.title" />
                 </a>;
         }
         if(active.indexOf("/permissions") !== -1) {
             dynamicMenuItem =
                 <a style={{flexFlow: "row"}} className={cnames({active: active.indexOf("/permissions") !== -1})}>
-                    <Icon size="1_5x" style={{position: "relative", top: 0, left: -8}} name="warning"/>
                     <Translate className="column-hide-small" component="span" content="account.permissions" />
                 </a>;
         }
@@ -720,7 +708,7 @@ class Header extends React.Component {
                         </div>
                     </div>
                     <div className="account-cash">
-                        <div className="table-cell"><Icon name="folder"/></div>
+                        <div className="table-cell"><Icon name="wallet"/></div>
                         {walletBalance}
                         <div>BTS</div>
                     </div>
