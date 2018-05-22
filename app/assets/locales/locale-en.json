@@ -1110,6 +1110,7 @@
     "zoom_all": "All",
     "settings": "Chart options",
     "featured": "Top Markets",
+    "filters": "Filters",
     "new": "New",
     "market_frozen": "The owner of %(asset)s has disabled trading in this market.",
     "show_star_1": "Show",

@@ -171,13 +171,20 @@ class Dashboard extends React.Component {
 
         return (
             <div ref="wrapper" className="grid-block tab-layout vertical">
-                <div ref="container" className="grid-container" style={{padding: "2rem 8px"}}>
-                    {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 15, paddingTop: 0}}>
-                        <Translate content="exchange.featured"/>
-                    </div>}
-                    {this.props.onlyAccounts ? null : <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
-                        {markets}
-                    </div>}
+                <div ref="container" className="grid-container" style={{padding: "25px 30px 45px"}}>
+                    <section className="section">
+                        {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 15, paddingTop: 0}}>
+                            <Translate content="exchange.filters"/>
+                        </div>}
+                    </section>
+                    <section className="section">
+                        {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 15, paddingTop: 0}}>
+                            <Translate content="exchange.featured"/>
+                        </div>}
+                        {this.props.onlyAccounts ? null : <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
+                            {markets}
+                        </div>}
+                    </section>
                 </div>
             </div>
         );
