@@ -161,7 +161,7 @@ div.transfer-input {
     /* Size & position */
     position: relative;
     margin: 0 auto;
-    padding: 21px 20px;
+    padding: 20px;
 
     /* Styles */
     background: transparent;
@@ -199,16 +199,38 @@ div.transfer-input {
     }
 
     .notice{
-        background-color: red;
-        border-radius: 50%;
+        background-color: #de2233;
+        border-radius: 10px;
         font-size: 12px;
         line-height: 16px;
-        padding: 2px 8px;
+        padding: 2px 7px;
+    }
+
+    &.active > .notice{
+        background-color: #fff;
+        color: #de2233
+    }
+
+    .notice-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .table-cell-hr{
+        margin: 5px 15px;
+    }
+
+    .app-menu-arrow{
+        display: inline-block;
+        border-top: 5px solid #fff;
+        border-left: 4.5px solid transparent;
+        border-right: 4.5px solid transparent;
+        margin-left: 10px;
     }
 
     ul.dropdown {
         /* Size & position */
-        min-width: 200px;
         position: absolute;
         top: 2.4rem;
         right: 0;

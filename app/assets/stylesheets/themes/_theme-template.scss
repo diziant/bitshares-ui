@@ -1843,10 +1843,6 @@ $main-content-margin-block-bg-color
         .dropdown.header-menu {
             background-color: $account-background;
 
-            li.divider {
-                border-bottom: 1px solid $new-dark-text-color;
-            }
-
             > li:hover {
                 background-color: $new-light-panel-bg-color;
                 border-radius: 2px;

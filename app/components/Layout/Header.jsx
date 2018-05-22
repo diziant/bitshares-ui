@@ -460,8 +460,8 @@ class Header extends React.Component {
         const submenus = {
             [SUBMENUS.SETTINGS]: (
                 <ul className="dropdown header-menu header-submenu" style={{
-                    left: -200,
-                    top: 64,
+                    left: 0,
+                    top: 60,
                     maxHeight: !this.state.dropdownActive ? 0 : maxHeight,
                     overflowY: "auto"
                 }}>
@@ -471,6 +471,7 @@ class Header extends React.Component {
                             <Translate content="header.settings" component="span" className="parent-item-name"/>
                         </div>
                     </li>
+                    <hr className="table-cell-hr"></hr>
                     <li onClick={this._onNavigate.bind(this, "/settings/general")}>
                         <Translate content="settings.general" component="div" className="table-cell"/>
                     </li>
@@ -551,11 +552,6 @@ class Header extends React.Component {
                                     <Translate className="column-hide-small" component="span" content="header.explorer" />
                                 </a>
                             </li>
-                            {!!createAccountLink ? null : <li className="column-hide-small">
-                                <a style={{flexFlow: "row"}} onClick={this._showSend.bind(this)}>
-                                    <span><Translate content="header.payments" /></span>
-                                </a>
-                            </li>}
                             {/* Dynamic Menu Item */}
                             <li>{dynamicMenuItem}</li>
                         </ul>
@@ -575,7 +571,7 @@ class Header extends React.Component {
                                 {currentAccount}
                             </div>
                             <div className="notice">2</div>
-                            <div className="hamburger">{hamburger}</div>
+                            <div className="app-menu-arrow"></div>
 
                             { this.state.dropdownSubmenuActive  && submenus[this.state.dropdownSubmenuActiveItem] && (
                                 submenus[this.state.dropdownSubmenuActiveItem]
@@ -592,6 +588,8 @@ class Header extends React.Component {
                                             content={`header.${this.props.locked ? "unlock_short" : "lock_short"}`}/></div>
                                     </li>
 
+                                    <hr className="table-cell-hr"></hr>
+
                                     {this.props.locked ?
                                         <li className={cnames({active: active.indexOf(`/create-account/${!passwordLogin ? "wallet" : "password"}`) !== -1})}
                                             onClick={this._onNavigate.bind(this, `/create-account/${!passwordLogin ? "wallet" : "password"}`)}>
@@ -605,6 +603,7 @@ class Header extends React.Component {
                                             <div className="table-cell"><Translate content="header.dashboard"/></div>
                                         </li>
                                         : null}
+
 
                                     {!isMyAccount ? <li className="divider"
                                                         onClick={this[isContact ? "_onUnLinkAccount" : "_onLinkAccount"].bind(this)}>
@@ -640,12 +639,14 @@ class Header extends React.Component {
                                         <div className="table-cell"><Translate content="modal.deposit.submit_beta"/></div>
                                     </li>
 
-                                    <li className={cnames("divider", {active: active.indexOf("/deposit-withdraw") !== -1}, {disabled: !enableDepositWithdraw})}
+                                    <li className={cnames("divider", {active: active.indexOf("/deposit-withdraw") !== -1}, {disabled: !enableDepositWithdraw}, "notice-wrapper")}
                                         onClick={!enableDepositWithdraw ? () => {
                                         } : this._onNavigate.bind(this, "/deposit-withdraw")}>
                                         <div className="table-cell"><Translate content="modal.withdraw.submit"/></div>
+                                        <div className="notice">1</div>
                                     </li>
 
+                                    <hr className="table-cell-hr"></hr>
 
                                     <li className={cnames({active: active.indexOf("/settings") !== -1}, "divider", "desktop-only")} onClick={this._onNavigate.bind(this, "/settings")}>
                                         <div className="table-cell"><Translate content="header.settings" /></div>
@@ -655,15 +656,20 @@ class Header extends React.Component {
                                         <div className="table-cell"><Translate content="header.settings" /> </div>
                                     </li>
 
-                                    <li className={cnames({active: active.indexOf("/news") !== -1})}
+                                    <hr className="table-cell-hr"></hr>
+
+                                    <li className={cnames({active: active.indexOf("/news") !== -1}, "notice-wrapper")}
                                         onClick={this._onNavigate.bind(this, "/news")}>
                                         <div className="table-cell"><Translate content="news.news"/></div>
+                                        <div className="notice">322</div>
                                     </li>
 
                                     <li className={cnames({active: active.indexOf("/help/introduction/bitshares") !== -1}, "divider")}
                                         onClick={this._onNavigate.bind(this, "/help/introduction/bitshares")}>
                                         <div className="table-cell"><Translate content="header.help"/></div>
                                     </li>
+
+                                    <hr className="table-cell-hr"></hr>
 
                                     <li className={cnames({active: active.indexOf("/voting") !== -1})}
                                         onClick={this._onNavigate.bind(this, `/account/${currentAccount}/voting`)}>
@@ -699,6 +705,8 @@ class Header extends React.Component {
                                         onClick={this._onNavigate.bind(this, `/account/${currentAccount}/permissions`)}>
                                         <div className="table-cell"><Translate content="account.permissions"/></div>
                                     </li>
+
+                                    <hr className="table-cell-hr"></hr>
 
                                     {!hasLocalWallet && (
                                         <li className={cnames({active: active.indexOf("/accounts") !== -1}, "divider")}
