@@ -1416,8 +1416,12 @@ $main-content-margin-block-bg-color
     }
 
     div.fm-container:hover {
-        background-color: darken($light-panel-bg-color, 5%);
+        border-color: #fca032;
         cursor: pointer;
+        .market-box__header{
+            background-color: #fca032;
+            color: #fff;
+        }
     }
 
     .api-node {
@@ -1981,6 +1985,7 @@ $main-content-margin-block-bg-color
 
     .menu-dropdown-wrapper {
         display: flex;
+        width: 185px;
         text-align: center;
         border-radius: 0;
         align-items: center;
@@ -1999,8 +2004,11 @@ $main-content-margin-block-bg-color
     }
 
     .total-value {
-        margin-right: 5px;
         margin-left: 10px;
+    }
+
+    .bts{
+        margin-left: 5px;
     }
 }
 

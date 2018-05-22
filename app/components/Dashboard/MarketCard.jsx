@@ -94,6 +94,25 @@ class MarketCard extends React.Component {
         let changeClass = !marketStats ? "" : parseFloat(marketStats.change) > 0 ? "change-up" : parseFloat(marketStats.change) < 0 ? "change-down" : "";
 
         return (
+            <div className="fm-container market-box">
+                <div className="market-box__wrapper">
+                    <div className="market-box__header">Open.Monero</div>
+                    <div className="market-box__header-suppl">Bitusd</div>
+                    <img className="market-box__image" src="/asset-symbols/monero.png" alt="monero" />
+                </div>
+                <div className="filters-box__wrapper">
+                    <div className="filters-box__value">
+                        <span className="filters-box__name">Highest Volume</span>
+                        <span className="filters-box__price">57445.32 BTC</span>
+                    </div>
+                </div>
+                <div className="filters-box__currency">
+                    <span className="filters-box__currency-name">Monero</span>
+                    <span className="filters-box__percent filters-box__percent_positive">+5%</span>
+                </div>
+            </div>
+
+            /*
             <div className={cnames("grid-block no-overflow fm-container", this.props.className)} onClick={this.goToMarket.bind(this)}>
                 <div className="grid-block vertical shrink">
                     <div className="v-align">
@@ -105,8 +124,9 @@ class MarketCard extends React.Component {
                     <div className="fm-volume"><Translate content="exchange.price" />: <div className="float-right">{marketStats && marketStats.price ? utils.price_text(marketStats.price.toReal(), base, quote) : null}</div></div>
                     <div className="fm-volume"><Translate content="exchange.volume" />: <div className="float-right">{!marketStats ? null : utils.format_volume(marketStats.volumeBase, quote.get("precision"))}</div></div>
                     <div className="fm-change"><Translate content="exchange.change" />: <div className={cnames("float-right", changeClass)}>{!marketStats ? null : marketStats.change}%</div></div>
-                </div>
-            </div>
+                </div>s
+        </div>*/         
+            
         );
     }
 }

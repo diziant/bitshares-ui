@@ -710,7 +710,7 @@ class Header extends React.Component {
                     <div className="account-cash">
                         <div className="table-cell"><Icon name="wallet"/></div>
                         {walletBalance}
-                        <div>BTS</div>
+                        <div className="bts">BTS</div>
                     </div>
                 </div>
                 <SendModal id="send_modal_header"

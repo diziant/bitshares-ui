@@ -176,6 +176,60 @@ class Dashboard extends React.Component {
                         {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 15, paddingTop: 0}}>
                             <Translate content="exchange.filters"/>
                         </div>}
+                        {this.props.onlyAccounts ? null : <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container filters-box">
+                            <div className="fm-container">
+                                <div className="filters-box__wrapper">
+                                    <img className="filters-box__image" src="/asset-symbols/monero.png" alt="monero" />
+                                    <div className="filters-box__value">
+                                        <span className="filters-box__name">Highest Volume</span>
+                                        <span className="filters-box__price">57445.32 BTC</span>
+                                    </div>
+                                </div>
+                                <div className="filters-box__currency">
+                                    <span className="filters-box__currency-name">Monero</span>
+                                    <span className="filters-box__percent filters-box__percent_positive">+5%</span>
+                                </div>
+                            </div>
+                            <div className="fm-container">
+                                <div className="filters-box__wrapper">
+                                    <img className="filters-box__image" src="/asset-symbols/bitcoin.png" alt="bitcoin" />
+                                    <div className="filters-box__value">
+                                        <span className="filters-box__name">Highest Volume</span>
+                                        <span className="filters-box__price">57445.32 BTC</span>
+                                    </div>
+                                </div>
+                                <div className="filters-box__currency">
+                                    <span className="filters-box__currency-name">Monero</span>
+                                    <span className="filters-box__percent filters-box__percent_negative">-125%</span>
+                                </div>
+                            </div>
+                            <div className="fm-container">
+                                <div className="filters-box__wrapper">
+                                    <img className="filters-box__image" src="/asset-symbols/neo.png" alt="neo" />
+                                    <div className="filters-box__value">
+                                        <span className="filters-box__name">Highest Volume</span>
+                                        <span className="filters-box__price">57445.32 BTC</span>
+                                    </div>
+                                </div>
+                                <div className="filters-box__currency">
+                                    <span className="filters-box__currency-name">Monero</span>
+                                    <span className="filters-box__percent">0.00%</span>
+                                </div>
+                            </div>
+                            <div className="fm-container">
+                                <div className="filters-box__wrapper">
+                                    <img className="filters-box__image" src="/asset-symbols/bitcoin.png" alt="bitcoin" />
+                                    <div className="filters-box__value">
+                                        <span className="filters-box__name">Highest Volume</span>
+                                        <span className="filters-box__price">57445.32 BTC</span>
+                                    </div>
+                                </div>
+                                <div className="filters-box__currency">
+                                    <span className="filters-box__currency-name">Monero</span>
+                                    <span className="filters-box__percent filters-box__percent_positive">+5%</span>
+                                </div>
+                            </div>
+                        </div>}
                     </section>
                     <section className="section">
                         {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 15, paddingTop: 0}}>
