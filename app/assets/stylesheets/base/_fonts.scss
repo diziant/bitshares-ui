@@ -9,6 +9,20 @@
   }
 }
 
+@include font-face(AvenirNextCyr-Demi, 'vendors/AvenirNextCyr-Demi', 600, normal);
+@mixin AvenirNextCyr-Demi {
+  font-family: 'AvenirNextCyr-Demi', arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@include font-face(AvenirNextCyr-Medium, 'vendors/AvenirNextCyr-Medium', 500, normal);
+@mixin AvenirNextCyr-Medium {
+  font-family: 'AvenirNextCyr-Medium', arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 @include font-face(Roboto-Light, 'vendors/Roboto-Light', 300, normal);
 @mixin RobotoLight {
   font-family: 'Roboto-Light', arial, sans-serif;
@@ -56,7 +70,7 @@
 /* ***** styles ****** */
 
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto-Regular', arial, sans-serif;
+  font-family: 'AvenirNextCyr-Medium', arial, sans-serif;
 }
 
 .monospace {
