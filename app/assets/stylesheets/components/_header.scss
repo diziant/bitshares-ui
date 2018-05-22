@@ -26,15 +26,21 @@
     padding: 0;
     border-right: none;
     > a {
-      font-weight: bold;
-      line-height: 2rem;
+      font-weight: 500;
+      line-height: 1.8rem;
       padding-left: 1.25rem;
       padding-right: 0.75rem;
-      font-size: 1.1rem;
+      font-size: 15px;
       @include breakpoint(large) {
-        padding-left: 1.75rem;
-        padding-right: 1.75rem;
+        padding-left: .94rem;
+        padding-right: .94rem;
       }
+    }
+    > .logo{
+        margin-right: 35px;
+        margin-left: 32px;
+        padding-left: 0;
+        padding-right: 0;
     }
   }
 
@@ -166,13 +172,14 @@ ul.dropdown.header-menu {
     border: none;
     z-index: 1004;
     > li {
-        height: 41px;
+        height: 29px;
         padding: 2px 5px 2px 10px;
+        margin-left: 5px;
+        margin-right: 5px;
         > div {
             vertical-align: middle;
         }
         > div:first-of-type {
-            padding-top: 5px;
             > span.icon > svg {
                 height: 1.5rem;
                 width: 1.5rem;

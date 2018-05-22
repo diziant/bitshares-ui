@@ -462,7 +462,7 @@ $main-content-margin-block-bg-color
     }
 
     .header-container span.icon.lock-unlock > svg > path {
-        fill: $button-bg-color;
+        fill: #fff;
     }
 
     .grp-menu-item button {
@@ -1112,9 +1112,8 @@ $main-content-margin-block-bg-color
             }
 
             > a:hover, > a.active{
-                background-color: $bg-color !important;
-                color: $primary-text-color;
-
+                color: $header-text-color;
+                background-color: transparent;
                 .icon > svg > path {
                   fill: $primary-text-color;
                 }
@@ -1837,25 +1836,30 @@ $main-content-margin-block-bg-color
 
         .menu-dropdown-wrapper {
             &.active {
-                background: $panel-bg-color;
+                background: $new-panel-bg-color;
             }
         }
 
         .dropdown.header-menu {
-            background-color: $panel-bg-color;
+            background-color: $account-background;
 
             li.divider {
-                border-bottom: 1px solid $dark-text-color;
+                border-bottom: 1px solid $new-dark-text-color;
             }
 
             > li:hover {
-                background-color: $super-light-panel-bg-color
+                background-color: $new-light-panel-bg-color;
+                border-radius: 2px;
             }
         }
 
         .total-value {
-            color: $account-green
+            color: $primary-text-color;
         }
+    }
+
+    .tab-layout{
+        background-color: $new-bg-color;
     }
 
     .flip-arrow:hover {
@@ -1959,17 +1963,18 @@ $main-content-margin-block-bg-color
 
 .header-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    height: 64px;
+    height: 60px;
 
     .menu-bar {
         overflow: visible;
     }
 
     .logo {
-        padding-top: .7rem;
-        padding-bottom: .8rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
     }
 
     .dropdown-wrapper:after {
@@ -1977,14 +1982,13 @@ $main-content-margin-block-bg-color
     }
 
     .menu-dropdown-wrapper {
-        height: 65px;
-        width: 65px;
+        display: flex;
         text-align: center;
         border-radius: 0;
+        align-items: center;
 
         .hamburger .icon {
             position: relative;
-            top: 12px;
         }
     }
 
@@ -1997,9 +2001,8 @@ $main-content-margin-block-bg-color
     }
 
     .total-value {
-        text-align: right;
-        font-size: 80%;
-        line-height: normal;
+        margin-right: 5px;
+        margin-left: 10px;
     }
 }
 
@@ -2011,8 +2014,18 @@ $main-content-margin-block-bg-color
     }
 }
 
+.account-wrapper{
+    display: flex;
+}
+
 .app-menu {
   flex: 0;
+}
+
+.account-cash{
+    display: flex;
+    align-items: center;
+    padding: 20px 30px 20px 20px;
 }
 
 .truncated {
@@ -2023,6 +2036,7 @@ $main-content-margin-block-bg-color
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: right;
+    color: #fff;
   }
 }
 

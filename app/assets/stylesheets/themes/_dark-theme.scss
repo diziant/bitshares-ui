@@ -46,13 +46,20 @@ $account-green: #7ED321;
 $account-primarytext: white;
 $account-dimmed: #afafaf;
 $account-border: #323131;
-$account-background: #3f3f3f;
+$account-background: #2a2a2a;
 $account-tabs-background: #2f2f2f;
 
 $pulsate-green-start:$account-green;
 $pulsate-green-end:#aaf25c;
 $pulsate-red-start:$negative-color;
 $pulsate-red-end:#ef4040;
+
+// New-design
+$header-text-color: #fefefe;
+$new-bg-color: #fcfbfc;
+$new-panel-bg-color: #de2233;
+$new-light-panel-bg-color: #484b4c;
+$new-dark-text-color: #484b4c;
 
 .darkTheme {
   @include theme(
@@ -98,6 +105,6 @@ $pulsate-red-end:#ef4040;
     $settings-menu-hover-bg,
     $settings-menu-active-bg,
     $settings-api-node-border-color,
-    $main-content-margin-block-bg-color
+    $main-content-margin-block-bg-color,
   );
 }

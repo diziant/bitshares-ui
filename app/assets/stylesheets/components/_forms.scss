@@ -161,7 +161,7 @@ div.transfer-input {
     /* Size & position */
     position: relative;
     margin: 0 auto;
-    padding: 12px 15px;
+    padding: 21px 20px;
 
     /* Styles */
     background: transparent;
@@ -193,6 +193,19 @@ div.transfer-input {
         max-height: 400px;
     }
 
+    .account-name{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .notice{
+        background-color: red;
+        border-radius: 50%;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 2px 8px;
+    }
+
     ul.dropdown {
         /* Size & position */
         min-width: 200px;
@@ -216,7 +229,6 @@ div.transfer-input {
         overflow: hidden;
 
         > li {
-            width: 100%;
 
             &:last-of-type span {
                 border: none;

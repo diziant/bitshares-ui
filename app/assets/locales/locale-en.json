@@ -54,7 +54,8 @@
     "locked_tip": "<br/>Click to login.<br/><br/>Closing the browser window will also log you out.",
     "unlocked_tip": "<br/>Click to log out.<br/><br/>Closing the browser window will also log you out.",
     "account_notify": "The active account is now %(account)s",
-    "account_value": "Account value"
+    "account_value": "Account value",
+    "markets": "Markets"
   },
   "browser_notification_messages": {
     "money_received_title": "Transfer from %(from)s",

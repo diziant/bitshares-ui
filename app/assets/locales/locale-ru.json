@@ -52,7 +52,8 @@
     "locked_tip":"<br/>Нажмите, чтобы войти.<br/><br/>Закрыв окно браузера, Вы также выйдете из аккаунта.",
     "unlocked_tip":"<br/>Нажмите, чтобы выйти.<br/><br/>Закрыв окно браузера, Вы также выйдете из аккаунта.",
     "account_notify":"Активный аккаунт в настоящее время %(account)s",
-    "account_value":"Оценка"
+    "account_value":"Оценка",
+    "markets": "Лучшие рынки"
   },
   "browser_notification_messages": {
     "money_received_title": "Перевод от %(from)s",
