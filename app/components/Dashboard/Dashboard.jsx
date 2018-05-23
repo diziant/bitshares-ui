@@ -178,55 +178,55 @@ class Dashboard extends React.Component {
                         </div>}
                         {this.props.onlyAccounts ? null : <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container filters-box">
                             <div className="fm-container">
-                                <div className="filters-box__wrapper">
-                                    <img className="filters-box__image" src="/asset-symbols/monero.png" alt="monero" />
-                                    <div className="filters-box__value">
+                                <img className="fm-container__image" src="/asset-symbols/monero.png" alt="monero" />
+                                <div className="filters-box__content">
+                                    <div className="filters-box__item fm-container__item">
                                         <span className="filters-box__name">Highest Volume</span>
-                                        <span className="filters-box__price">57445.32 BTC</span>
+                                        <span className="fm-container__currency">Monero</span>
                                     </div>
-                                </div>
-                                <div className="filters-box__currency">
-                                    <span className="filters-box__currency-name">Monero</span>
-                                    <span className="filters-box__percent filters-box__percent_positive">+5%</span>
+                                    <div className="filters-box__item fm-container__item">
+                                        <span className="fm-container__value">57445.32 BTC</span>
+                                        <span className="fm-container__procent fm-container__procent_positive">+5%</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className="fm-container">
-                                <div className="filters-box__wrapper">
-                                    <img className="filters-box__image" src="/asset-symbols/bitcoin.png" alt="bitcoin" />
-                                    <div className="filters-box__value">
+                                <img className="fm-container__image" src="/asset-symbols/bitcoin.png" alt="monero" />
+                                <div className="filters-box__content">
+                                    <div className="filters-box__item fm-container__item">
                                         <span className="filters-box__name">Most Dumped</span>
-                                        <span className="filters-box__price">234.32 BTC</span>
+                                        <span className="fm-container__currency">Bitcoin</span>
                                     </div>
-                                </div>
-                                <div className="filters-box__currency">
-                                    <span className="filters-box__currency-name">Bitcoin</span>
-                                    <span className="filters-box__percent filters-box__percent_negative">-125%</span>
+                                    <div className="filters-box__item fm-container__item">
+                                        <span className="fm-container__value">234.32 BTC</span>
+                                        <span className="fm-container__procent fm-container__procent_negative">-125%</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className="fm-container">
-                                <div className="filters-box__wrapper">
-                                    <img className="filters-box__image" src="/asset-symbols/neo.png" alt="neo" />
-                                    <div className="filters-box__value">
+                                <img className="fm-container__image" src="/asset-symbols/neo.png" alt="monero" />
+                                <div className="filters-box__content">
+                                    <div className="filters-box__item fm-container__item">
                                         <span className="filters-box__name">Sponsored</span>
-                                        <span className="filters-box__price">10 BTC</span>
+                                        <span className="fm-container__currency">Neo</span>
                                     </div>
-                                </div>
-                                <div className="filters-box__currency">
-                                    <span className="filters-box__currency-name">Neo</span>
-                                    <span className="filters-box__percent">0.00%</span>
+                                    <div className="filters-box__item fm-container__item">
+                                        <span className="fm-container__value">10 BTC</span>
+                                        <span className="fm-container__procent">0.00%</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className="fm-container">
-                                <div className="filters-box__wrapper">
-                                    <img className="filters-box__image" src="/asset-symbols/bitcoin.png" alt="bitcoin" />
-                                    <div className="filters-box__value">
+                                <img className="fm-container__image" src="/asset-symbols/bitcoin.png" alt="monero" />
+                                <div className="filters-box__content">
+                                    <div className="filters-box__item fm-container__item">
                                         <span className="filters-box__name">Most Dumped</span>
-                                        <span className="filters-box__price">43.32 BTC</span>
+                                        <span className="fm-container__currency">Bitcoin</span>
                                     </div>
-                                </div>
-                                <div className="filters-box__currency">
-                                    <span className="filters-box__currency-name">Bitcoin</span>
-                                    <span className="filters-box__percent filters-box__percent_positive">+5%</span>
+                                    <div className="filters-box__item fm-container__item">
+                                        <span className="fm-container__value">322 BTC</span>
+                                        <span className="fm-container__procent fm-container__procent_positive">+5%</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>}

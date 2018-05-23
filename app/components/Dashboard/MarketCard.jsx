@@ -91,39 +91,39 @@ class MarketCard extends React.Component {
 
         // let marketID = base.get("symbol") + "_" + quote.get("symbol");
         // let stats = marketStats;
-        let changeClass = !marketStats ? "" : parseFloat(marketStats.change) > 0 ? "market-box__item-value_positive" : parseFloat(marketStats.change) < 0 ? "market-box__item-value_negative" : "";
+        let changeClass = !marketStats ? "" : parseFloat(marketStats.change) > 0 ? "fm-container__procent_positive" : parseFloat(marketStats.change) < 0 ? "fm-container__procent_negative" : "";
 
         console.log(quote);
 
         return (
             <div className="fm-container market-box" onClick={this.goToMarket.bind(this)}>
                 <div className="market-box__header">
-                    <div className="market-box__header-item market-box__header-item_bg"><AssetName dataPlace="top" name={base.get("symbol")} /></div>
-                    <div className="market-box__header-item"><AssetName dataPlace="top" name={quote.get("symbol")} /></div>
-                    <img className="market-box__image" src={`${__BASE_URL__}asset-symbols/${imgName.toLowerCase()}.png`} alt={imgName.toLowerCase()} />
+                    <div className="market-box__content market-box__content_bg fm-container__currency"><AssetName dataPlace="top" name={base.get("symbol")} /></div>
+                    <div className="market-box__content fm-container__currency"><AssetName dataPlace="top" name={quote.get("symbol")} /></div>
+                    <img className="market-box__image fm-container__image" src={`${__BASE_URL__}asset-symbols/${imgName.toLowerCase()}.png`} alt={imgName.toLowerCase()} />
                 </div>
-                <div className="market-box__content fm-container__content">
-                    <div className="market-box__item">
-                        <span className="market-box__item-name">
+                <div className="market-box__content">
+                    <div className="market-box__item fm-container__item">
+                        <span className="market-box__item-name fm-container__value">
                             <Translate content="exchange.price" />
                         </span>
-                        <span className="market-box__item-value">
+                        <span className="market-box__item-value fm-container__procent">
                             {marketStats && marketStats.price ? utils.price_text(marketStats.price.toReal(), base, quote) : null}
                         </span>
                     </div>
-                    <div className="market-box__item">
-                        <span className="market-box__item-name">
+                    <div className="market-box__item fm-container__item">
+                        <span className="market-box__item-name fm-container__value">
                             <Translate content="exchange.volume" />
                         </span>
-                        <span className="market-box__item-value">
+                        <span className="market-box__item-value fm-container__procent">
                             {!marketStats ? null : utils.format_volume(marketStats.volumeBase, quote.get("precision"))}
                         </span>
                     </div>
-                    <div className="market-box__item">
-                        <span className="market-box__item-name">
+                    <div className="market-box__item fm-container__item">
+                        <span className="fm-container__value">
                             <Translate content="exchange.change" />
                         </span>
-                        <span className={`market-box__item-value ${changeClass}`}>
+                        <span className={`fm-container__procent ${changeClass}`}>
                             {!marketStats ? null : marketStats.change}%
                         </span>
                     </div>

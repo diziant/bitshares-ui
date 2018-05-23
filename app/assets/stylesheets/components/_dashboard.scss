@@ -20,6 +20,9 @@
         &:nth-child(3n+3){
             margin-right: 0;
         }
+        &:nth-child(-n+3){
+            margin-top: 0;
+        }
     }
 }
 @media only screen and (min-width: 75em){
@@ -49,48 +52,24 @@
     }
 }
 
-.filters-box{
-    .fm-container{
+.fm-container{
+    &__item{
         display: flex;
         justify-content: space-between;
-        padding: 15px;
-    }
-    &__wrapper{
-        display: flex;
+        align-items: baseline;
     }
     &__image{
         width: 42px;
         height: 42px;
     }
     &__value{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 15px;
-        font-weight: 500;
-    }
-    &__name{
-        font-size: 15px;
-        display: block;
-    }
-    &__price{
         font-size: 14px;
-        display: block;
+        font-weight: 500;
         color: #8c979b;
     }
-    &__currency{
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        justify-content: space-between;
-        &-name{
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase
-        }
-    }
-    &__percent{
+    &__procent{
         font-size: 14px;
+        font-weight: 500;
         &_positive{
             color: #579f15;
         }
@@ -98,52 +77,53 @@
             color: #de2233;
         }
     }
+    &__currency{
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.filters-box{
+    .fm-container{
+        display: flex;
+        padding: 15px;
+    }
+    &__content{
+        margin-left: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__name{
+        font-size: 15px;
+        font-weight: 500;
+    }
 }
 
 .market-box{
+    &__content{
+        padding: 11.5px 15px;
+        &_bg{
+            background-color: #f1f3f5;
+        }
+    }
     &__header{
         border-bottom: 1px solid #d1d4db;
         position: relative;
-        &-item{
-            padding: 11.5px 15px;
-            text-transform: uppercase;
-            font-size: 13px;
-            font-weight: 600;
-            &_bg{
-                background-color: #f1f3f5;
-            }
-        }
     }
     &__image{
         position: absolute;
-        width: 42px;
-        height: 42px;
         background-color: #fff;
         border-radius: 50%;
         top: 10px;
         right: 15px;
     }
-    &__content{
-        padding: 11.5px 15px;
-    }
     &__item{
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 15px;
-        font-size: 14px;
         &:last-child{
             margin-bottom: 0;
-        }
-        &-name{
-            color: #8c979b;
-        }
-        &-value{
-            &_positive{
-                color: #579f15;
-            }
-            &_negative{
-                color: #de2233;
-            }
         }
     }
 }
