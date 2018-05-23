@@ -194,12 +194,12 @@ class Dashboard extends React.Component {
                                 <div className="filters-box__wrapper">
                                     <img className="filters-box__image" src="/asset-symbols/bitcoin.png" alt="bitcoin" />
                                     <div className="filters-box__value">
-                                        <span className="filters-box__name">Highest Volume</span>
-                                        <span className="filters-box__price">57445.32 BTC</span>
+                                        <span className="filters-box__name">Most Dumped</span>
+                                        <span className="filters-box__price">234.32 BTC</span>
                                     </div>
                                 </div>
                                 <div className="filters-box__currency">
-                                    <span className="filters-box__currency-name">Monero</span>
+                                    <span className="filters-box__currency-name">Bitcoin</span>
                                     <span className="filters-box__percent filters-box__percent_negative">-125%</span>
                                 </div>
                             </div>
@@ -207,12 +207,12 @@ class Dashboard extends React.Component {
                                 <div className="filters-box__wrapper">
                                     <img className="filters-box__image" src="/asset-symbols/neo.png" alt="neo" />
                                     <div className="filters-box__value">
-                                        <span className="filters-box__name">Highest Volume</span>
-                                        <span className="filters-box__price">57445.32 BTC</span>
+                                        <span className="filters-box__name">Sponsored</span>
+                                        <span className="filters-box__price">10 BTC</span>
                                     </div>
                                 </div>
                                 <div className="filters-box__currency">
-                                    <span className="filters-box__currency-name">Monero</span>
+                                    <span className="filters-box__currency-name">Neo</span>
                                     <span className="filters-box__percent">0.00%</span>
                                 </div>
                             </div>
@@ -220,12 +220,12 @@ class Dashboard extends React.Component {
                                 <div className="filters-box__wrapper">
                                     <img className="filters-box__image" src="/asset-symbols/bitcoin.png" alt="bitcoin" />
                                     <div className="filters-box__value">
-                                        <span className="filters-box__name">Highest Volume</span>
-                                        <span className="filters-box__price">57445.32 BTC</span>
+                                        <span className="filters-box__name">Most Dumped</span>
+                                        <span className="filters-box__price">43.32 BTC</span>
                                     </div>
                                 </div>
                                 <div className="filters-box__currency">
-                                    <span className="filters-box__currency-name">Monero</span>
+                                    <span className="filters-box__currency-name">Bitcoin</span>
                                     <span className="filters-box__percent filters-box__percent_positive">+5%</span>
                                 </div>
                             </div>

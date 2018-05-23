@@ -1,15 +1,4 @@
 
-@include breakpoint(large) {
-    div.fm-container {
-        > div:first-child() {
-            padding-right: 15px;
-        }
-
-        > div:last-child() {
-            padding-right: 15px;
-        }
-    }
-}
 @media only screen and  (max-width: 50em){
     .small-up-1 > div{
         flex: 0 0 100%;
@@ -68,24 +57,21 @@
     }
     &__wrapper{
         display: flex;
-        padding-right: 0;
     }
     &__image{
-        display: block;
         width: 42px;
         height: 42px;
     }
     &__value{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-left: 15px;
         font-weight: 500;
     }
     &__name{
         font-size: 15px;
         display: block;
-        margin-bottom: 10px;
     }
     &__price{
         font-size: 14px;
@@ -95,9 +81,8 @@
     &__currency{
         display: flex;
         flex-direction: column;
-        padding-right: 0;
         text-align: right;
-        justify-content: space-around;
+        justify-content: space-between;
         &-name{
             font-size: 13px;
             font-weight: 600;
@@ -116,30 +101,50 @@
 }
 
 .market-box{
-    &__wrapper{
-        border-bottom: 1px solid #d1d4db;
-        padding-right: 0 !important;
-        position: relative;
-    }
     &__header{
-        padding: 10px 15px;
-        background-color: #f1f3f5;
-        text-transform: uppercase;
-        font-size: 13px;
-        font-weight: 600;
-        &-suppl{
-            padding: 10px 15px;
+        border-bottom: 1px solid #d1d4db;
+        position: relative;
+        &-item{
+            padding: 11.5px 15px;
             text-transform: uppercase;
             font-size: 13px;
             font-weight: 600;
+            &_bg{
+                background-color: #f1f3f5;
+            }
         }
     }
     &__image{
         position: absolute;
         width: 42px;
         height: 42px;
+        background-color: #fff;
+        border-radius: 50%;
         top: 10px;
         right: 15px;
+    }
+    &__content{
+        padding: 11.5px 15px;
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        font-size: 14px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &-name{
+            color: #8c979b;
+        }
+        &-value{
+            &_positive{
+                color: #579f15;
+            }
+            &_negative{
+                color: #de2233;
+            }
+        }
     }
 }
 

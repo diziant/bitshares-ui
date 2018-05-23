@@ -91,26 +91,45 @@ class MarketCard extends React.Component {
 
         // let marketID = base.get("symbol") + "_" + quote.get("symbol");
         // let stats = marketStats;
-        let changeClass = !marketStats ? "" : parseFloat(marketStats.change) > 0 ? "change-up" : parseFloat(marketStats.change) < 0 ? "change-down" : "";
+        let changeClass = !marketStats ? "" : parseFloat(marketStats.change) > 0 ? "market-box__item-value_positive" : parseFloat(marketStats.change) < 0 ? "market-box__item-value_negative" : "";
+
+        console.log(quote);
 
         return (
-            <div className="fm-container market-box">
-                <div className="market-box__wrapper">
-                    <div className="market-box__header">Open.Monero</div>
-                    <div className="market-box__header-suppl">Bitusd</div>
-                    <img className="market-box__image" src="/asset-symbols/monero.png" alt="monero" />
+            <div className="fm-container market-box" onClick={this.goToMarket.bind(this)}>
+                <div className="market-box__header">
+                    <div className="market-box__header-item market-box__header-item_bg"><AssetName dataPlace="top" name={base.get("symbol")} /></div>
+                    <div className="market-box__header-item"><AssetName dataPlace="top" name={quote.get("symbol")} /></div>
+                    <img className="market-box__image" src={`${__BASE_URL__}asset-symbols/${imgName.toLowerCase()}.png`} alt={imgName.toLowerCase()} />
                 </div>
-                <div className="filters-box__wrapper">
-                    <div className="filters-box__value">
-                        <span className="filters-box__name">Highest Volume</span>
-                        <span className="filters-box__price">57445.32 BTC</span>
+                <div className="market-box__content fm-container__content">
+                    <div className="market-box__item">
+                        <span className="market-box__item-name">
+                            <Translate content="exchange.price" />
+                        </span>
+                        <span className="market-box__item-value">
+                            {marketStats && marketStats.price ? utils.price_text(marketStats.price.toReal(), base, quote) : null}
+                        </span>
+                    </div>
+                    <div className="market-box__item">
+                        <span className="market-box__item-name">
+                            <Translate content="exchange.volume" />
+                        </span>
+                        <span className="market-box__item-value">
+                            {!marketStats ? null : utils.format_volume(marketStats.volumeBase, quote.get("precision"))}
+                        </span>
+                    </div>
+                    <div className="market-box__item">
+                        <span className="market-box__item-name">
+                            <Translate content="exchange.change" />
+                        </span>
+                        <span className={`market-box__item-value ${changeClass}`}>
+                            {!marketStats ? null : marketStats.change}%
+                        </span>
                     </div>
                 </div>
-                <div className="filters-box__currency">
-                    <span className="filters-box__currency-name">Monero</span>
-                    <span className="filters-box__percent filters-box__percent_positive">+5%</span>
-                </div>
             </div>
+            
 
             /*
             <div className={cnames("grid-block no-overflow fm-container", this.props.className)} onClick={this.goToMarket.bind(this)}>
