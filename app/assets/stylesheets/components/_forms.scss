@@ -193,9 +193,17 @@ div.transfer-input {
         max-height: 400px;
     }
 
+    .menu-wrapper{
+        display: flex;
+        align-items: center;
+    }
+
     .account-name{
+        font-size: 15px;
         margin-left: 10px;
         margin-right: 10px;
+        color: #fff;
+        font-family: "AvenirNextCyr";
     }
 
     .notice{
@@ -206,7 +214,7 @@ div.transfer-input {
         padding: 2px 7px;
     }
 
-    &.active > .notice{
+    &.active .menu-wrapper > .notice{
         background-color: #fff;
         color: #de2233
     }
@@ -236,13 +244,12 @@ div.transfer-input {
         right: 0;
         z-index: 999;
         margin-left: 0;
+        font-size: 14px;
 
         /* Styles */
         background: #fff;
         border-radius: 0 0 5px 5px;
-        border: 1px solid rgba(0,0,0,0.2);
-        border-top: none;
-        border-bottom: none;
+        border: 0 !important;
         list-style: none;
         transition: all 0.3s ease-out;
 

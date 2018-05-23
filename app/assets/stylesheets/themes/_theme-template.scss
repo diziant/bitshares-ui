@@ -1987,9 +1987,9 @@ $main-content-margin-block-bg-color
     .menu-dropdown-wrapper {
         display: flex;
         width: 185px;
-        text-align: center;
         border-radius: 0;
         align-items: center;
+        justify-content: space-between;
 
         .hamburger .icon {
             position: relative;
@@ -2006,10 +2006,12 @@ $main-content-margin-block-bg-color
 
     .total-value {
         margin-left: 10px;
+        font-size: 15px;
     }
 
     .bts{
         margin-left: 5px;
+        font-size: 15px;
     }
 }
 
@@ -2031,6 +2033,7 @@ $main-content-margin-block-bg-color
 
 .account-cash{
     display: flex;
+    width: 153px;
     align-items: center;
     padding: 20px 30px 20px 20px;
 }

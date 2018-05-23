@@ -354,16 +354,16 @@ class Header extends React.Component {
             }
             if (tradingAccounts.length >= 1) {
                 accountsList = tradingAccounts
-                .sort()
-                .filter((name) => name !== currentAccount)
-                .map((name) => {
-                    return (
-                        <li key={name} className={cnames({active: active.replace("/account/", "").indexOf(name) === 0})} onClick={this._accountClickHandler.bind(this, name)}>
-                            <div style={{paddingTop: 0}} className="table-cell"><AccountImage style={{position: "relative", top: 4}} size={{height: 20, width: 20}} account={name}/></div>
-                            <div className="table-cell" style={{paddingLeft: 10}}><a className={"lower-case" + (name === account_display_name ? " current-account" : "")}>{name}</a></div>
-                        </li>
-                    );
-                });
+                    .sort()
+                    .filter((name) => name !== currentAccount)
+                    .map((name) => {
+                        return (
+                            <li key={name} className={cnames({active: active.replace("/account/", "").indexOf(name) === 0})} onClick={this._accountClickHandler.bind(this, name)}>
+                                <div style={{paddingTop: 0}} className="table-cell"><AccountImage style={{position: "relative", top: 4}} size={{height: 20, width: 20}} account={name}/></div>
+                                <div className="table-cell" style={{paddingLeft: 10}}><a className={"lower-case" + (name === account_display_name ? " current-account" : "")}>{name}</a></div>
+                            </li>
+                        );
+                    });
             }
         }
 
@@ -473,14 +473,14 @@ class Header extends React.Component {
                     </li>
 
                     {!this.props.settings.get("passwordLogin") && (
-                    [
-                        <li key={"settings.password"} onClick={this._onNavigate.bind(this, "/settings/password")}>
+                        [
+                            <li key={"settings.password"} onClick={this._onNavigate.bind(this, "/settings/password")}>
                                 <Translate content="settings.password" component="div" className="table-cell"/>
                             </li>,
-                        <li key={"settings.backup"} onClick={this._onNavigate.bind(this, "/settings/backup")}>
+                            <li key={"settings.backup"} onClick={this._onNavigate.bind(this, "/settings/backup")}>
                                 <Translate content="settings.backup" component="div" className="table-cell"/>
                             </li>
-                    ]
+                        ]
                     )}
                     <li onClick={this._onNavigate.bind(this, "/settings/restore")}>
                         <Translate content="settings.restore" component="div" className="table-cell"/>
@@ -525,11 +525,11 @@ class Header extends React.Component {
                                 </Link>
                             </li>
                             {!currentAccount || !!createAccountLink ? null :
-                            <li>
-                                <Link style={{flexFlow: "row"}} to={`/account/${currentAccount}`} className={cnames({active: active.indexOf("account/") !== -1 && active.indexOf("/account/") !== -1 && active.indexOf("/assets") === -1 && active.indexOf("/voting") === -1 && active.indexOf("/signedmessages") === -1 && active.indexOf("/member-stats") === -1 && active.indexOf("/vesting") === -1 && active.indexOf("/whitelist") === -1 && active.indexOf("/permissions") === -1})}>
-                                    <Translate className="column-hide-small" content="header.dashboard" />
-                                </Link>
-                            </li>}
+                                <li>
+                                    <Link style={{flexFlow: "row"}} to={`/account/${currentAccount}`} className={cnames({active: active.indexOf("account/") !== -1 && active.indexOf("/account/") !== -1 && active.indexOf("/assets") === -1 && active.indexOf("/voting") === -1 && active.indexOf("/signedmessages") === -1 && active.indexOf("/member-stats") === -1 && active.indexOf("/vesting") === -1 && active.indexOf("/whitelist") === -1 && active.indexOf("/permissions") === -1})}>
+                                        <Translate className="column-hide-small" content="header.dashboard" />
+                                    </Link>
+                                </li>}
                             <li>
                                 <a style={{flexFlow: "row"}} className={cnames(active.indexOf("market/") !== -1 ? null : "column-hide-xxs", {active: active.indexOf("market/") !== -1})} onClick={this._onNavigate.bind(this, tradeUrl)}>
                                     <Translate className="column-hide-small" component="span" content="header.exchange" />
@@ -548,18 +548,22 @@ class Header extends React.Component {
                 <div className="account-wrapper">
                     <div className="app-menu">
                         <div onClick={this._toggleDropdownMenu} className={cnames("menu-dropdown-wrapper dropdown-wrapper", {active: this.state.dropdownActive})}>
-                            <div>
-                                { this.props.currentAccount == null ? null :
-                                    <span onClick={this._toggleLock.bind(this)} style={{"cursor": "pointer"}}>
-                                        <Icon className="lock-unlock" name={this.props.locked ? "locked" : "unlocked"}/>
-                                    </span>
-                                }
+                            <div className="menu-wrapper">
+                                <div>
+                                    { this.props.currentAccount == null ? null :
+                                        <span onClick={this._toggleLock.bind(this)} style={{"cursor": "pointer"}}>
+                                            <Icon className="lock-unlock" name={this.props.locked ? "locked" : "unlocked"}/>
+                                        </span>
+                                    }
+                                </div>
+                                <div className="text account-name">
+                                    {currentAccount}
+                                </div>
                             </div>
-                            <div className="text account-name">
-                                {currentAccount}
+                            <div className="menu-wrapper">
+                                <div className="notice">2</div>
+                                <div className="app-menu-arrow"></div>
                             </div>
-                            <div className="notice">2</div>
-                            <div className="app-menu-arrow"></div>
 
                             { this.state.dropdownSubmenuActive  && submenus[this.state.dropdownSubmenuActiveItem] && (
                                 submenus[this.state.dropdownSubmenuActiveItem]
@@ -594,7 +598,7 @@ class Header extends React.Component {
 
 
                                     {!isMyAccount ? <li className="divider"
-                                                        onClick={this[isContact ? "_onUnLinkAccount" : "_onLinkAccount"].bind(this)}>
+                                        onClick={this[isContact ? "_onUnLinkAccount" : "_onLinkAccount"].bind(this)}>
                                         <div className="table-cell"><Translate
                                             content={`account.${isContact ? "unfollow" : "follow"}`}/></div>
                                     </li> : null}
@@ -680,7 +684,7 @@ class Header extends React.Component {
                                     </li>
 
                                     {isMyAccount ? <li className={cnames({active: active.indexOf("/vesting") !== -1})}
-                                                    onClick={this._onNavigate.bind(this, `/account/${currentAccount}/vesting`)}>
+                                        onClick={this._onNavigate.bind(this, `/account/${currentAccount}/vesting`)}>
                                         <div className="table-cell"><Translate content="account.vesting.title"/></div>
                                     </li> : null}
 

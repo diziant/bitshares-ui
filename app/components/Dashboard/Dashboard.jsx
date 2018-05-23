@@ -139,31 +139,31 @@ class Dashboard extends React.Component {
         let validMarkets = 0;
 
         let markets = featuredMarkets
-        .map(pair => {
-            let isLowVolume = this.props.lowVolumeMarkets.get(pair[1] + "_" + pair[0]) || this.props.lowVolumeMarkets.get(pair[0] + "_" + pair[1]);
-            if (!isLowVolume) validMarkets++;
-            let className = "";
-            if (validMarkets > 24) {
-                return null;
-            } else if (validMarkets > 15) {
-                className += " show-for-large";
-            } else if (validMarkets > 6) {
-                className += " show-for-medium";
-            }
+            .map(pair => {
+                let isLowVolume = this.props.lowVolumeMarkets.get(pair[1] + "_" + pair[0]) || this.props.lowVolumeMarkets.get(pair[0] + "_" + pair[1]);
+                if (!isLowVolume) validMarkets++;
+                let className = "";
+                if (validMarkets > 24) {
+                    return null;
+                } else if (validMarkets > 15) {
+                    className += " show-for-large";
+                } else if (validMarkets > 6) {
+                    className += " show-for-medium";
+                }
 
-            return (
-                <MarketCard
-                    key={pair[0] + "_" + pair[1]}
-                    marketId={pair[1] + "_" + pair[0]}
-                    new={newAssets.indexOf(pair[1]) !== -1}
-                    className={className}
-                    quote={pair[0]}
-                    base={pair[1]}
-                    invert={pair[2]}
-                    isLowVolume={isLowVolume}
-                />
-            );
-        }).filter(a => !!a);
+                return (
+                    <MarketCard
+                        key={pair[0] + "_" + pair[1]}
+                        marketId={pair[1] + "_" + pair[0]}
+                        new={newAssets.indexOf(pair[1]) !== -1}
+                        className={className}
+                        quote={pair[0]}
+                        base={pair[1]}
+                        invert={pair[2]}
+                        isLowVolume={isLowVolume}
+                    />
+                );
+            }).filter(a => !!a);
 
         if (!accountCount) {
             return <LoginSelector />;
@@ -173,7 +173,7 @@ class Dashboard extends React.Component {
             <div ref="wrapper" className="grid-block tab-layout vertical">
                 <div ref="container" className="grid-container" style={{padding: "25px 30px 45px"}}>
                     <section className="section">
-                        {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 15, paddingTop: 0}}>
+                        {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 24, paddingTop: 0}}>
                             <Translate content="exchange.filters"/>
                         </div>}
                         {this.props.onlyAccounts ? null : <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container filters-box">
@@ -232,7 +232,7 @@ class Dashboard extends React.Component {
                         </div>}
                     </section>
                     <section className="section">
-                        {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 15, paddingTop: 0}}>
+                        {this.props.onlyAccounts ? null : <div className="block-content-header" style={{marginBottom: 24, paddingTop: 0}}>
                             <Translate content="exchange.featured"/>
                         </div>}
                         {this.props.onlyAccounts ? null : <div className="grid-block small-up-1 medium-up-3 large-up-4 no-overflow fm-outer-container">
